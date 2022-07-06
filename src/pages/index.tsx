@@ -5,7 +5,7 @@ import styles from '../../styles/Home.module.css'
 
 export default function Home() {
   const bla = 'var'
-  console.log('teste')
+  console.log('🚀 ~ file: index.tsx ~ line 8 ~ Home ~ bla', bla)
 
   return (
     <div className={styles.container}>
