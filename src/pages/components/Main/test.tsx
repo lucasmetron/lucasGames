@@ -12,6 +12,8 @@ describe('<Main />', () => {
     ).toBeInTheDocument()
   })
 
+  console.log('teste')
+
   it('shold render correctly', () => {
     const { container } = render(<Main />)
     console.log('sdsd')
