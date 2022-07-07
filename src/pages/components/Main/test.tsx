@@ -15,6 +15,6 @@ describe('<Main />', () => {
   it('shold render correctly', () => {
     const { container } = render(<Main />)
 
-    expect(container.firstChild).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot() // cria snapshot e depois fica comprando se o container bate com o snapshot
   })
 })
