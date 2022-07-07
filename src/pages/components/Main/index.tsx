@@ -1,5 +1,9 @@
 import React from 'react'
 
 export default function index() {
-  return <div>index</div>
+  return (
+    <main>
+      <h1>React Avançado</h1>
+    </main>
+  )
 }
