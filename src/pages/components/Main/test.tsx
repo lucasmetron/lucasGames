@@ -14,6 +14,7 @@ describe('<Main />', () => {
 
   it('shold render correctly', () => {
     const { container } = render(<Main />)
+    console.log('sdsd')
 
     expect(container.firstChild).toMatchSnapshot()
   })
