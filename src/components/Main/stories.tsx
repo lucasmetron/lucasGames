@@ -1,20 +1,23 @@
 import React from 'react'
 import Main from '.'
-import { withKnobs, text } from '@storybook/addon-knobs'
+import { Story, Meta } from '@storybook/react/types-6-0'
 
 export default {
   title: 'Main',
-  component: Main,
-  // aqui é importado os knobs
-  decorators: [withKnobs]
-}
+  component: Main
+  // se for passado essa prop, todos os story desse arquivo vao com esses args
+  // args: {
+  //   title: 'default',
+  //   description: 'teste'
+  // }
+} as Meta
 
-export const Basic = () => (
-  <Main
-    // como o Main só recebe props do tipo text, foi importando so o text
-    // 1 arg: espera o titulo que vai estar no storybook
-    // 2 arg: texto default
-    title={text('Title', 'Reac Avançado')}
-    description={text('Sub-titulo', 'JavaScipt')}
-  />
-)
+// podemos passar assim direto, pq como o comp ja tem essas props definidas, ele ja pega defautl
+export const Basic: Story = (args) => <Main {...args} />
+
+// ou podemos definir manual
+export const Basic2: Story = (args) => <Main {...args} />
+Basic2.args = {
+  title: 'Lucas',
+  description: 'rosa'
+}
