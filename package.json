@@ -9,9 +9,11 @@
     "lint": "eslint src --max-warnings=0",
     "postinstall": "husky install",
     "test": "jest",
+    "generate": "yarn plop --plopfile generators/plopfile.js",
     "test:watch": "yarn test --watch",
     "storybook": "start-storybook -s ./public -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -s ./public",
+    "prepare": "husky install"
   },
   "husky": {
     "hooks": {
